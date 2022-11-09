@@ -34,7 +34,7 @@ export class GifsService {
       this._historial.unshift(query);
     }
     this._historial = this._historial.splice(0,10);
-    // console.log(this._historial);
+    
 
     localStorage.setItem('historial', JSON.stringify(this._historial));
     
@@ -48,7 +48,6 @@ export class GifsService {
     .subscribe((resp: SearchGifsResponse)=>{
       this.resultados=resp.data;
       localStorage.setItem('resultados', JSON.stringify(this.resultados));
-      console.log(resp.data);
     })
 
   }

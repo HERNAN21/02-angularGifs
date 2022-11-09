@@ -24,7 +24,6 @@ export class BusquedaComponent implements OnInit {
     if (valor.trim().length === 0) {
       return;
     }
-    console.log(valor);
     this.gifService.buscarGifs(valor);
     this.text_buscar.nativeElement.value="";
   }
