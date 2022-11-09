@@ -23,4 +23,9 @@ export class SidebarComponent implements OnInit {
     
   }
 
+  buscar(value: string){
+    this.gifService.buscarGifs(value);
+    console.log(value);
+  }
+
 }
